@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meditsiiniteemaline veebileht">
+    <title>Meditsiin ja tervis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Kommentaar -->
+<header>
+    <h1>Meditsiin ja Tervis</h1>
+    <nav>
+
+        <a href="#kontakt">Kontakt</a> |
+        <a href="#forms">Küsimustik</a>
+    </nav>
+</header>
+
+<main>
+
+        <article>
+            <h2>Tervise ja meditsiini arengud</h2>
+            <p><strong>WHO</strong> (<abbr title="World Health Organization">WHO</abbr>) raporti järgi on tervishoiu innovatsioonid kiirelt kasvamas.</p>
+            <p>Meditsiini arengud on <i>olulised</i> igapäevaelus.</p>
+            <p>Siin on väljavõte ühest uuringust:</p>
+            <blockquote cite="https://www.who.int/health-topics">
+                "2024. aasta terviseuuringud <del>näitavad</del> olulisi arenguid vaktsiinide valdkonnas."
+            </blockquote>
+            <p>Meditsiinilised <mark>uuringud</mark> aitavad parandada <ins>inimeste</ins> elukvaliteeti.</p>
+            <figure>
+                <img src="https://ecosh.ee/wp-content/uploads/2022/12/Ecosh-Aju_ehitus_ja_aju_funktsioonid-jpg.webp" alt="Tervise uuringud">
+                <figcaption>Aju</figcaption>
+            </figure>
+
+            <p>Valem H<sub>2</sub>O on vee keemiline koostis ja E=mc<sup>2</sup> on Einsteini kuulus valem.</p>
+        </article>
+
+
+    <section id="kontakt">
+        <h2>Kontakt</h2>
+        <address>
+            <strong>Meditsiinikeskus</strong><br>
+            Mustamäe tee 45<br>
+            Tallinn, Eesti<br>
+            Tel: +372 5555 5555<br>
+            Email: <a href="mailto:info@meditsiinikeskus.ee">info@meditsiinikeskus.ee</a>
+        </address>
+    </section>
+
+    <section id="forms">
+        <h2>Jaga oma terviseinfot</h2>
+        <form action="/submit" method="POST">
+            <fieldset>
+                <legend>Isiklik teave</legend>
+                <label for="nimi">Nimi:</label>
+                <input type="text" id="nimi" name="nimi"><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+
+                <label for="sünnikuupäev">Sünnikuupäev:</label>
+                <input type="date" id="sünnikuupäev" name="sünnikuupäev"><br><br>
+
+
+                <label for="department">Vali osakond:</label>
+                <select id="department" name="department">
+                    <option value="pediaatria">Pediaatria</option>
+                    <option value="kirurgia">Kirurgia</option>
+                    <option value="intensiivravi">Intensiivravi</option>
+                    <option value="kardioloogia">Kardioloogia</option>
+                </select><br><br>
+
+            </fieldset>
+        </form>
+    </section>
+
+    <label>Kas olete nõus osalema terviseuuringutes?</label><br>
+    <input type="radio" id="jah" name="osale" value="jah">
+    <label for="jah">Jah</label><br>
+    <input type="radio" id="ei" name="osale" value="ei">
+    <label for="ei">Ei</label><br><br>
+
+    <button type="submit">Esita</button>
+    <label for="symptoms">Sümptomid:</label><br>
+    <textarea id="symptoms" name="symptoms" rows="4" cols="50">Kirjeldage oma sümptomeid siia...</textarea><br><br>
+
+    <section>
+        <h2>Kuula südametööd</h2>
+        <audio controls>
+            <source src="https://www.soundjay.com/human/heartbeat-01a.mp3" type="audio/mpeg">
+            Teie brauser ei toeta audioesitust.
+        </audio>
+
+        <h2>Vaata videot tervise kohta</h2>
+        <video width="320" height="240" controls>
+            <source src="https://static.vecteezy.com/system/resources/previews/046/874/935/mp4/man-practitioner-doctor-offering-medical-online-advice-from-his-office-physician-using-virtual-discussion-to-consult-patient-telemedicine-and-healthcare-support-footage-with-software-overlay-concept-video.mp4" type="video/mp4">
+            Teie brauser ei toeta videoesitust.
+        </video>
+    </section>
+
+    <h2>Meditsiiniline graafik</h2>
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+    <script>
+        let canvas = document.getElementById('myCanvas');
+        let context = canvas.getContext('2d');
+        context.fillStyle = 'lightblue';
+        context.fillRect(10, 10, 180, 80);
+    </script>
+
+    <h2>Tervishoiu statistika</h2>
+    <table>
+        <caption>Meditsiinilised uuringud</caption>
+        <colgroup>
+            <col style="background-color:lightgray">
+            <col style="background-color:white">
+        </colgroup>
+        <thead>
+        <tr>
+            <th>Uuringu nimi</th>
+            <th>Aasta</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Vaktsiiniuuring</td>
+            <td>2024</td>
+        </tr>
+        <tr>
+            <td>Vererõhu uuring</td>
+            <td>2023</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td>Kokku</td>
+            <td>2</td>
+        </tr>
+        </tfoot>
+    </table>
+
+    <h3>Terviseuuringud</h3>
+    <ol>
+        <li>Vaktsiinide areng</li>
+        <li>Vererõhu uuring</li>
+        <li>Kardioloogilised uuringud</li>
+    </ol>
+
+    <h3>Peamised valdkonnad</h3>
+    <ul>
+        <li>Pediaatria</li>
+        <li>Kardioloogia</li>
+        <li>Kirurgia</li>
+    </ul>
+
+    <details>
+        <summary>Loe rohkem tervishoiu uuringutest</summary>
+        <p>2024. aastal on tehtud palju edusamme uute ravimeetodite osas.</p>
+    </details>
+
+    <dialog id="myDialog">
+        <p>Näidisdialoogiboks</p>
+    </dialog>
+    <h2>Haigla asukoht</h2>
+    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik" width="300" height="200" title="WHO veebileht"></iframe>
+
+    <h2>Kood ja klaviatuuri näited</h2>
+    <p>Siin on näide, kuidas kirjutada <kbd>meditsiinilise</kbd> otsingu päringut:</p>
+    <pre><code>SELECT * FROM patients WHERE condition = 'healthy';</code></pre>
+
+    <p>Programm andis järgmise väljundi:</p>
+    <samp>Andmed leiti edukalt!</samp>
+
+
+    <h2>Ikoon</h2>
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+
+
+    <template id="greetingTemplate">
+        <p>Tere!</p>
+    </template>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 Tartu Ülikooli Kliinikum.</p>
+    <hr>
+    <p>Allikas: <cite>Meditsiin</cite>.</p>
+</footer>
+</body>
+</html>
