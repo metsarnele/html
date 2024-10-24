@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Meditsiiniteemaline veebileht">
     <title>Meditsiin ja tervis</title>
+    <style>
+    h1 {color:deeppink;}
+    .myDiv {background: lightpink;}
+</style>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <!-- Kommentaar -->
 <header>
-    <h1>Meditsiin ja Tervis</h1>
+    <h1>Tervis</h1>
     <nav>
 
         <a href="#kontakt">Kontakt</a> |
@@ -24,7 +28,7 @@
             <h2>Tervise ja meditsiini arengud</h2>
             <p><strong>WHO</strong> (<abbr title="World Health Organization">WHO</abbr>) raporti järgi on tervishoiu innovatsioonid kiirelt kasvamas.</p>
             <p>Meditsiini arengud on <i>olulised</i> igapäevaelus.</p>
-            <p>Siin on väljavõte ühest uuringust:</p>
+           <p>Siin on väljavõte ühest uuringust:</p>
             <blockquote cite="https://www.who.int/health-topics">
                 "2024. aasta terviseuuringud <del>näitavad</del> olulisi arenguid vaktsiinide valdkonnas."
             </blockquote>
@@ -34,7 +38,7 @@
                 <figcaption>Aju</figcaption>
             </figure>
 
-            <p>Valem H<sub>2</sub>O on vee keemiline koostis ja E=mc<sup>2</sup> on Einsteini kuulus valem.</p>
+            <p>Valem H<sub>2</sub>O on <span style="color:blue">vee</span> keemiline koostis ja E=mc<sup>2</sup> on Einsteini kuulus valem.</p>
         </article>
 
 
@@ -48,7 +52,15 @@
             Email: <a href="mailto:info@meditsiinikeskus.ee">info@meditsiinikeskus.ee</a>
         </address>
     </section>
+<picture>
 
+    <source media="(max-width: 600px)" srcset="https://www.sm.ee/sites/default/files/2022-06/tallinna-haigla.jpg">
+
+    <source media="(min-width: 601px)" srcset="https://www.sm.ee/sites/default/files/2022-06/tallinna-haigla.jpg">
+
+    <img src="https://www.sm.ee/sites/default/files/2022-06/tallinna-haigla.jpg" alt="Tallinna Haigla">
+</picture>
+<div class="myDiv">
     <section id="forms">
         <h2>Jaga oma terviseinfot</h2>
         <form action="/submit" method="POST">
@@ -66,10 +78,18 @@
 
                 <label for="department">Vali osakond:</label>
                 <select id="department" name="department">
-                    <option value="pediaatria">Pediaatria</option>
-                    <option value="kirurgia">Kirurgia</option>
-                    <option value="intensiivravi">Intensiivravi</option>
-                    <option value="kardioloogia">Kardioloogia</option>
+                    <optgroup label="Lastekliinik">
+            <option value="neonatoloogia">Neonatoloogia</option>
+            <option value="üldpediaatria">Üldpediaatria</option>
+        </optgroup>
+                     <optgroup label="Kirurgia">
+            <option value="üldkirurgia">Üldkirurgia</option>
+            <option value="plastiline-kirurgia">Plastiline kirurgia</option>
+        </optgroup>
+                    <optgroup label="Sisekliinik">
+            <option value="gastroenteroloogia">Gastroenteroloogia</option>
+            <option value="nefroloogia">Nefroloogia</option>
+        </optgroup>
                 </select><br><br>
 
             </fieldset>
@@ -85,7 +105,7 @@
     <button type="submit">Esita</button>
     <label for="symptoms">Sümptomid:</label><br>
     <textarea id="symptoms" name="symptoms" rows="4" cols="50">Kirjeldage oma sümptomeid siia...</textarea><br><br>
-
+</div>
     <section>
         <h2>Kuula südametööd</h2>
         <audio controls>
@@ -186,7 +206,7 @@
 </main>
 
 <footer>
-    <p>&copy; 2024 Tartu Ülikooli Kliinikum.</p>
+    <p>&copy; <small> 2024 Tartu Ülikooli Kliinikum.</small></p>
     <hr>
     <p>Allikas: <cite>Meditsiin</cite>.</p>
 </footer>
